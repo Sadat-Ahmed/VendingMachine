@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proj4110.VendingMachineController">
+   <top>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="57.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="55.0" prefWidth="203.0">
+               <children>
+                  <Label id="machineStatus" alignment="CENTER_RIGHT" layoutX="3.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="171.0" text="MACHINE STATUS:" textFill="#56536f" AnchorPane.leftAnchor="3.0">
+                     <font>
+                        <Font name="Verdana Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="status" editable="false" focusTraversable="false" layoutX="7.0" layoutY="15.0" prefHeight="25.0" prefWidth="364.0" text="OFF" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <right>
+      <SplitPane dividerPositions="0.5, 0.5" maxHeight="-Infinity" orientation="VERTICAL" prefHeight="222.0" prefWidth="271.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="94.0" prefWidth="271.0">
+               <children>
+                  <Button fx:id="pepsi" alignment="CENTER" layoutX="12.0" layoutY="60.0" mnemonicParsing="false"  prefHeight="34.0" prefWidth="76.0" text="PEPSI" />
+                  <Label layoutX="12.0" layoutY="30.0" prefHeight="18.0" prefWidth="160.0" text="MAKE SELECTION :" textFill="#56356f">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="67.0" text="75c">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="145.0" layoutY="68.0" text="STOCK LEVEL:" />
+                  <TextField fx:id="pepsiStockDisplay" layoutX="222.0" layoutY="65.0" opacity="0.67" prefHeight="25.0" prefWidth="36.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="37.0" prefWidth="264.0">
+               <children>
+                  <Button fx:id="sprite" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="3.0" mnemonicParsing="false"  prefHeight="33.0" prefWidth="76.0" text="SPRITE" />
+                  <Label layoutX="100.0" layoutY="10.0" text="80c">
+                     <font>
+                        <Font name="Verdana Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="145.0" layoutY="12.0" text="STOCK LEVEL:" />
+                  <TextField fx:id="spriteStockDisplay" layoutX="222.0" layoutY="7.0" prefHeight="25.0" prefWidth="36.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" prefHeight="70.0" prefWidth="269.0">
+               <children>
+                  <Button fx:id="cancel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="9.0" mnemonicParsing="false"  prefHeight="32.0" prefWidth="75.0" text="CANCEL" />
+                  <Button fx:id="restock" layoutX="100.0" layoutY="9.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="66.0" text="RESTOCK" />
+                  <Label fx:id="pinLabel" layoutX="102.0" layoutY="51.0" text="ENTER PIN:" visible="false" />
+                  <TextField fx:id="pinField" layoutX="166.0" layoutY="47.0" prefHeight="25.0" prefWidth="52.0" visible="false" />
+                  <Button fx:id="okPin" layoutX="222.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" text="OK" visible="false" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </right>
+   <bottom>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="120.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="100.0">
+               <children>
+                  <Button id="power" fx:id="power" layoutX="59.0" layoutY="47.0" mnemonicParsing="false"  text="POWER" textFill="#111010" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="97.0" prefWidth="417.0">
+               <children>
+                  <Button fx:id="takeChange" layoutX="166.0" layoutY="59.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="139.0" text="TAKE YOUR CHANGE" />
+                  <Button fx:id="takeCan" layoutX="166.0" layoutY="12.0" mnemonicParsing="false"  prefHeight="34.0" prefWidth="137.0" text="TAKE YOUR DRINK" />
+                  <TextField id="slotCans" fx:id="slotCans" layoutX="311.0" layoutY="12.0" prefHeight="33.0" prefWidth="60.0" text="0" />
+                  <TextField id="changeAmount" fx:id="changeAmount" editable="false" layoutX="311.0" layoutY="61.0" prefHeight="33.0" prefWidth="60.0" text="0.00" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </bottom>
+   <center>
+      <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="228.0" prefWidth="331.0">
+               <children>
+                  <Button fx:id="fiveCents" layoutX="83.0" layoutY="114.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="32.0" text="5c" />
+                  <Button fx:id="tenCents" layoutX="125.0" layoutY="114.0" mnemonicParsing="false"  text="10c" />
+                  <Button fx:id="cents25" layoutX="170.0" layoutY="114.0" mnemonicParsing="false"  prefHeight="0.0" prefWidth="35.0" text="25c" />
+                  <Label alignment="CENTER" layoutX="83.0" layoutY="88.0" prefHeight="17.0" prefWidth="123.0" text="ADD MONEY" />
+                  <Label layoutX="57.0" layoutY="178.0" text="YOU HAVE INSERTED:" />
+                  <TextField fx:id="moneyInserted" editable="false" layoutX="177.0" layoutY="174.0" prefHeight="25.0" prefWidth="56.0" text="0.00" />
+               </children>
+            </AnchorPane>
+         </children>
+      </FlowPane>
+   </center>
+</BorderPane>
